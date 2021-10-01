@@ -1,0 +1,43 @@
+﻿@page "/"
+
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    <MapsZoomSettings Enable="true">
+        <MapsZoomToolbarSettings>
+            <MapsZoomToolbarButton ToolbarItems="@ZoomToolbar"></MapsZoomToolbarButton>
+        </MapsZoomToolbarSettings>
+    </MapsZoomSettings>
+    <MapsLayers>
+        <MapsLayer UrlTemplate="https://tile.openstreetmap.org/level/tileX/tileY.png" TValue="string">
+            <MapsMarkerSettings>
+                <MapsMarker TValue="MapMarkerDataSource" Visible="true" DataSource="@MarkerDataSource" Height="20" Width="20" Shape="MarkerType.Circle" AnimationDuration="0">
+                    <MapsMarkerTooltipSettings Visible="true" ValuePath="Name" Format="State: ${Name} <br> Country: ${Country}">
+                        <MapsMarkerTooltipTextStyle FontFamily="Segoe UI"></MapsMarkerTooltipTextStyle>
+                    </MapsMarkerTooltipSettings>
+                </MapsMarker>
+            </MapsMarkerSettings>
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+@code {
+    public List<ToolbarItem> ZoomToolbar = new List<ToolbarItem> { ToolbarItem.Zoom, ToolbarItem.ZoomIn, ToolbarItem.ZoomOut, ToolbarItem.Pan, ToolbarItem.Reset };
+    public class MapMarkerDataSource
+    {
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+        public string Name { get; set; }
+        public string Country { get; set; }
+    };
+    public List<MapMarkerDataSource> MarkerDataSource = new List<MapMarkerDataSource> {
+        new MapMarkerDataSource{ Latitude=37.6276571, Longitude=-122.4276688, Name="San Bruno", Country="United States" },
+        new MapMarkerDataSource{ Latitude=33.5302186, Longitude=-117.7418381, Name="Laguna Niguel", Country="United States" },
+        new MapMarkerDataSource{ Latitude=40.7424509, Longitude=-74.0081468, Name="New York", Country="United States" },
+        new MapMarkerDataSource{ Latitude=-23.5268201, Longitude=-46.6489927, Name="Bom Retiro", Country="Brazil" },
+        new MapMarkerDataSource{ Latitude=43.6533855, Longitude=-79.3729994, Name="Toronto", Country="Canada" },
+        new MapMarkerDataSource{ Latitude=48.8773406, Longitude=2.3299627, Name="Paris", Country="‎France" },
+        new MapMarkerDataSource{ Latitude=52.4643089, Longitude=13.4107368, Name="Berlin", Country="Germany" },
+        new MapMarkerDataSource{ Latitude=19.1555762, Longitude=72.8849595, Name="Mumbai", Country="India" },
+        new MapMarkerDataSource{ Latitude=51.5326602, Longitude=-0.1262422, Name="London", Country="England" }
+    };
+}
