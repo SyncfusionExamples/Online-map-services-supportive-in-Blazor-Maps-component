@@ -25,7 +25,7 @@
     string url;
     protected override async Task OnInitializedAsync()
     {
-        @* Add the ApI key in below Url. *@
+        @* Add the API key in below Url. *@
         url = await SfMaps.GetBingUrlTemplate("https://dev.virtualearth.net/REST/V1/Imagery/Metadata/RoadOnDemand?output=json&uriScheme=https&key=");
     }
     public List<ToolbarItem> ZoomToolbar = new List<ToolbarItem> { ToolbarItem.Zoom, ToolbarItem.ZoomIn, ToolbarItem.ZoomOut, ToolbarItem.Pan, ToolbarItem.Reset };
