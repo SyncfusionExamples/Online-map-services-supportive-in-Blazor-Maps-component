@@ -16,8 +16,8 @@ In this sample, the Syncfusion Blazor Maps component consumes online web map ser
 
 * Checkout this project to a location in your disk.
 * Open the solution file using the Visual Studio 2022.
-* Restore the NuGet packages by rebuilding the solution.
 * Add the API keys for the online map providers such as Bing, ESRI, Mapbox and TomTom in their respective tile server URLs set in the `UrlTemplate` property of the Maps.
+* Restore the NuGet packages by rebuilding the solution.
 * Run the project.
 
 ## Blog reference
