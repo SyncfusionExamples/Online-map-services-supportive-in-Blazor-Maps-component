@@ -8,7 +8,8 @@
         </MapsZoomToolbarSettings>
     </MapsZoomSettings>
     <MapsLayers>
-        <MapsLayer UrlTemplate="https://ibasemaps-api.arcgis.com/arcgis/rest/services/World_Imagery/MapServer/tile/level/tileY/tileX?apiKey=AAPK04316d918e224b339f72d107b5aef880I2MT0hI3L2xIX4DMcuEELiOcb4DRmxeGp_-hqlsFhziOvqBwel-uIA-87Dp9h3eI" TValue="string">
+         @* Add the valid key in below URL. *@
+        <MapsLayer UrlTemplate="https://ibasemaps-api.arcgis.com/arcgis/rest/services/World_Imagery/MapServer/tile/level/tileY/tileX?apiKey=<Enter a valid key here>" TValue="string">
             <MapsMarkerSettings>
                 <MapsMarker TValue="MapMarkerDataSource" Visible="true" DataSource="@MarkerDataSource" Height="20" Width="20" Shape="MarkerType.Circle" AnimationDuration="0">
                     <MapsMarkerTooltipSettings Visible="true" ValuePath="Name" Format="State: ${Name} <br> Country: ${Country}">

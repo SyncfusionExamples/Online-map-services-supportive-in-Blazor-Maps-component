@@ -25,7 +25,8 @@
     string url;
     protected override async Task OnInitializedAsync()
     {
-        url = await SfMaps.GetBingUrlTemplate("https://dev.virtualearth.net/REST/V1/Imagery/Metadata/RoadOnDemand?output=json&uriScheme=https&key=AuQazZ3PUo3p2_c2KPhqMku-iKvee5fKcRREIg46MENqVTM9dp2ZyTbrHJpR9esZ");
+        @* Add the valid key in below URL. *@
+        url = await SfMaps.GetBingUrlTemplate("https://dev.virtualearth.net/REST/V1/Imagery/Metadata/RoadOnDemand?output=json&uriScheme=https&key=<Enter a valid key here>");
     }
     public List<ToolbarItem> ZoomToolbar = new List<ToolbarItem> { ToolbarItem.Zoom, ToolbarItem.ZoomIn, ToolbarItem.ZoomOut, ToolbarItem.Pan, ToolbarItem.Reset };
     public class MapMarkerDataSource
