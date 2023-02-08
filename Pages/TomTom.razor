@@ -8,8 +8,8 @@
         </MapsZoomToolbarSettings>
     </MapsZoomSettings>
     <MapsLayers>
-        @* Add the API key in below URL. *@
-        <MapsLayer UrlTemplate="http://api.tomtom.com/map/1/tile/basic/main/level/tileX/tileY.png?key=" TValue="string">
+        @* Add the valid key in below URL. *@
+        <MapsLayer UrlTemplate="http://api.tomtom.com/map/1/tile/basic/main/level/tileX/tileY.png?key=<Enter a valid key here>" TValue="string">
             <MapsMarkerSettings>
                 <MapsMarker TValue="MapMarkerDataSource" Visible="true" DataSource="@MarkerDataSource" Height="20" Width="20" Shape="MarkerType.Circle" AnimationDuration="0">
                     <MapsMarkerTooltipSettings Visible="true" ValuePath="Name" Format="State: ${Name} <br> Country: ${Country}">
